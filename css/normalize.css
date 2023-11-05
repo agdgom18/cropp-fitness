@@ -81,3 +81,8 @@ body {
     scroll-behavior: auto !important;
   }
 }
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
