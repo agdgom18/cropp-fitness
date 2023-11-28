@@ -52,18 +52,7 @@ body,
   Убираем внешние отступы вертикали нужным тегам,
   у которых есть атрибут class
  */
-:where(
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  p,
-  ul,
-  ol,
-  dl
-):where([class]) {
+:where(h1, h2, h3, h4, h5, h6, p, ul, ol, dl):where([class]) {
   margin-block: 0;
 }
 
@@ -137,9 +126,9 @@ body {
 :root {
   --color-dark: #000000;
   --color-dark-alternate: #131619;
-  --color-light: #FFFFFF;
+  --color-light: #ffffff;
   --color-dark-gray: #404040;
-  --color-light-gray: #C4C4C4;
+  --color-light-gray: #c4c4c4;
 
   --border-radius: 30px;
   --border: 1px solid var(--color-light);
@@ -209,7 +198,12 @@ p:not([class]):not(:last-child) {
   overflow: hidden !important;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: 700;
   text-transform: uppercase;
   color: var(--color-light);
@@ -362,7 +356,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .header-menu-link.is-current::after {
-  content: "";
+  content: '';
   width: 5px;
   aspect-ratio: 1;
   background-color: currentColor;
@@ -528,11 +522,15 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   row-gap: 32px;
   padding-top: var(--trainingTypesItemBgIconSize);
-  background: url('./icons/transparent-wrrow-bottom-left.svg') 100% 0/var(--trainingTypesItemBgIconSize) no-repeat;
+  background: url('./icons/transparent-wrrow-bottom-left.svg') 100% 0 / var(--trainingTypesItemBgIconSize) no-repeat;
 }
 
 .training-types-item-title {
   font-size: 16px;
+}
+
+.join-us {
+  background-color: var(--color-dark-alternate);
 }
 
 .join-us-video-wrapper {
