@@ -1,0 +1,67 @@
+@import '../_variable.scss';
+
+.banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  min-height: calc(100vh - $header-height);
+  padding: 36px 70px;
+  color: $color-light;
+  background-color: $color-dark-alternate;
+}
+
+.banner-body {
+  text-transform: uppercase;
+}
+.banner-info {
+  display: flex;
+  align-items: end;
+  font-size: clamp(16px, 1.56vw, 30px);
+  line-height: 1.27;
+  font-weight: 700;
+}
+.banner-info::before {
+  content: '';
+  width: clamp(60px, 10.1vw, 194px);
+  aspect-ratio: 1;
+  margin-right: 30px;
+  background: url('./icons/bold-arrow-down-right.svg') center/contain no-repeat;
+}
+.banner-title {
+  font-size: min(18.75vw, 360px);
+  line-height: 1;
+}
+.banner-pagination {
+}
+.banner-pagination-list {
+  display: flex;
+  justify-content: center;
+}
+.banner-pagination-item {
+  display: flex;
+}
+.banner-pagination-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 7px;
+  background-color: transparent;
+  border: none;
+}
+
+.banner-pagination-button::after {
+  content: '';
+  width: 10px;
+  aspect-ratio: 1;
+  border: $border;
+  border-radius: 50%;
+  transition-duration: $transition-duration;
+}
+
+.banner-pagination-button.is-current::after {
+  background-color: $color-light;
+}
+
+.banner-pagination-button:not(.is-current):hover::after {
+  border-color: $color-light-gray;
+}

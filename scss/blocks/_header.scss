@@ -1,0 +1,74 @@
+@import '../_variable.scss';
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 20px;
+  min-height: 90px;
+  padding-inline: 32px;
+  background-color: $color-dark-alternate;
+}
+.header-logo {
+  flex-shrink: 0;
+  &__image {
+  }
+}
+.header-menu {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 50px;
+  }
+
+  &__link {
+    display: inline-flex;
+    align-items: center;
+    column-gap: 7px;
+    height: $header-height;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 1.2px;
+  }
+}
+
+.header-actions {
+  display: flex;
+  column-gap: 40px;
+}
+
+.header-burger-button {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 4px;
+  width: 40px;
+  aspect-ratio: 1;
+  padding-left: 8px;
+  color: $color-light;
+  background-color: transparent;
+  border: $border;
+  border-radius: 50%;
+}
+
+.header-burger-button-line {
+  width: 6px;
+  height: 1px;
+  background-color: currentColor;
+  box-shadow: 16px 0 0 currentColor;
+}
+
+.header-menu-link.is-current::after {
+  content: '';
+  width: 5px;
+  aspect-ratio: 1;
+  background-color: currentColor;
+  border-radius: 50%;
+}
+
+.header-burger-button:hover {
+  color: $color-light-gray;
+  border-color: currentColor;
+}
